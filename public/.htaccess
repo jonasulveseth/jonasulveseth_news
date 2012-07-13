@@ -1,0 +1,21 @@
+allow from all
+
+SetEnv APPLICATION_ENV development
+#SetEnv APPLICATION_ENV production
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+
+<IfModule mod_headers.c>
+	Header unset ETag
+	FileETag None
+
+	<FilesMatch "\.(css|js|swf)$">
+		Header set Cache-Control "public, max-age=604800"
+	</FilesMatch>
+</IfModule>

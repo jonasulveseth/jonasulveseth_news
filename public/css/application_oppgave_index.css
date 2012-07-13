@@ -1,0 +1,29 @@
+
+  a.title:link
+  {
+    color: #333333;
+    font-size: 1em;
+    text-decoration: none;
+  }
+  
+  a.title:hoover
+  {
+    text-decoration: none;
+  }
+  
+  a.title:visited
+  {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .element_wrapper
+  {
+    margin-bottom: 2em;
+  }
+  
+  .wrapper
+  {
+    margin-top: 2em;
+  }
+  

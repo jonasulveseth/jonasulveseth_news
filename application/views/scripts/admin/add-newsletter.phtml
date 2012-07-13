@@ -1,0 +1,26 @@
+<h1>Create a Newsletter</h1>
+<br/><br/>
+<script type="text/javascript" src="<?php echo $this->baseUrl() ?>/plugins/ckeditor/ckeditor.js"></script>
+<script src="<?php echo $this->baseUrl() ?>/plugins/ckeditor/_samples/sample.js" type="text/javascript"></script>
+
+<link href="<?php echo $this->baseUrl() ?>/plugins/ckeditor/_sample/sample.css" rel="stylesheet" type="text/css" />
+
+<?= $this->form ?>
+
+<script type="text/javascript">
+  //<![CDATA[
+
+  CKEDITOR.replace( 'body',
+  {
+    fullPage : true,
+    extraPlugins : 'docprops',
+    filebrowserBrowseUrl : '<?= $this->baseUrl() ?>/plugins/ckfinder/ckfinder.html',
+    filebrowserImageBrowseUrl : '<?= $this->baseUrl() ?>/plugins/ckfinder/ckfinder.html?Type=Images',
+    filebrowserFlashBrowseUrl : '<?= $this->baseUrl() ?>/plugins/ckfinder/ckfinder.html?Type=Flash',
+    filebrowserUploadUrl : '<?= $this->baseUrl() ?>/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+    filebrowserImageUploadUrl : '<?= $this->baseUrl() ?>/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+    filebrowserFlashUploadUrl : '<?= $this->baseUrl() ?>/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+  });
+
+  //]]>
+</script>

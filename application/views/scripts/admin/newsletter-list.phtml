@@ -1,0 +1,6 @@
+<h1>Newsletter list</h1>
+<?php foreach ($this->newsletters as $list): ?>
+<p style="margin-top: 35px">
+    <a href="<?= $this->url(array('controller' => 'admin' , 'action' => 'edit-newsletter' , 'newsletterId' => $list->id)) ?>"><?= $list->title ?></a>
+</p>
+<?php endforeach; ?>

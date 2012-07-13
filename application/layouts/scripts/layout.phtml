@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php $this->headLink()->prependStylesheet($this->baseUrl() . '/css/extras.css'); ?>
+<?php $this->headLink()->prependStylesheet($this->baseUrl() . '/plugins/sliding-login/css/style.css'); ?>
+<?php $this->headLink()->prependStylesheet($this->baseUrl() . '/plugins/sliding-login/css/slide.css'); ?>
+<?php $this->headScript()->appendFile($this->baseUrl() . '/plugins/sliding-login/js/slide.js'); ?>
+<?php $this->headScript()->appendFile($this->baseUrl() . '/scripts/googleadwords.js'); ?>
+<?php $this->headLink()->appendStylesheet($this->baseUrl() . '/css/screen.css'); ?>
+<?php $this->headTitle('Jonas Ulveseth News'); ?>
+
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+<?php echo $this->headTitle() ?>
+    </head>
+    <body>
+        <div class="container">
+        <img src="<?= $this->baseUrl() ?>/plugins/ckfinder/userfiles/images/mall/jonasulveseth-newsbanner.png">
+<?php echo $this->layout()->content; ?>
+        </div>
+    </body>
+</html>
