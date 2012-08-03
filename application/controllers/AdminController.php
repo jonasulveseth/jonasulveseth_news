@@ -212,7 +212,7 @@ class AdminController extends Zend_Controller_Action {
                 $redFlag = NULL;
                 foreach ($form->getValues('rules') as $rule) {
                     $memberHasNewsletterModel = new Application_Model_DbTable_MemberHasNewsRule();
-                    $memberRule = $memberHasNewsletterModel->fetchRow(array('id_rule = ?' => '1', 'access = ?' => '0'));
+                    $memberRule = $memberHasNewsletterModel->fetchRow(array('id_rule = ?' => '1', 'access = ?' => '0' , 'id_member = ?' => $members->ID));
                     if (NULL != $memberRule) {
                         $redFlag = TRUE;
                     }
