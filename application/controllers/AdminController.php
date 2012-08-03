@@ -93,6 +93,7 @@ class AdminController extends Zend_Controller_Action {
         $newsletterQueueModel = new Application_Model_DbTable_NewsLetterQueue();
         $newsletterQueue = $newsletterQueueModel->fetchAll(array('sent = ?' => '0'), null, '100');
         if (count($newsletterQueue) == '0') {
+			echo "finns ingen kö";
             exit;
         }
 
